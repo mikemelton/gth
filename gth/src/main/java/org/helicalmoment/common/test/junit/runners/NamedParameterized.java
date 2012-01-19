@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.helicalmoment.common.test.TestCase;
 import org.junit.runner.Runner;
 import org.junit.runner.notification.RunNotifier;
@@ -22,6 +24,7 @@ import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.Statement;
 import org.junit.runners.model.TestClass;
 
+@Slf4j
 public class NamedParameterized extends Suite {
 	private final List<Runner> runners = new ArrayList<Runner>();
 	
@@ -76,6 +79,16 @@ public class NamedParameterized extends Suite {
 		@Override
 		protected Annotation[] getRunnerAnnotations() {
 			return new Annotation[0];
+		}
+
+		@Override
+		protected void runChild(FrameworkMethod method, RunNotifier notifier) {
+			if (testCase.isIgnored()) {
+				log.info("------------------------- IGNORING TEST [{}] -------------------------\n", testName(method));
+				notifier.fireTestIgnored(describeChild(method));
+			} else {
+				super.runChild(method, notifier);
+			}
 		}
 	}
 	
