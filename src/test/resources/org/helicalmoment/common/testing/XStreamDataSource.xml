@@ -1,0 +1,20 @@
+<list>
+  <org.helicalmoment.common.testing.XStreamGenerator_-TestTestCase>
+    <name>Test Scenario 1</name>
+    <description>This is a test which does some stuff and some other stuff.</description>
+    <ignored>false</ignored>
+    <steps>
+      <org.helicalmoment.common.testing.XStreamGenerator_-TestTestStep>
+        <name>name1</name>
+        <description>desc1</description>
+      </org.helicalmoment.common.testing.XStreamGenerator_-TestTestStep>
+    </steps>
+    <id>0</id>
+  </org.helicalmoment.common.testing.XStreamGenerator_-TestTestCase>
+  <org.helicalmoment.common.testing.XStreamGenerator_-TestTestCase>
+    <name>Test Scenario 2</name>
+    <description>This is another test.</description>
+    <ignored>false</ignored>
+    <id>1</id>
+  </org.helicalmoment.common.testing.XStreamGenerator_-TestTestCase>
+</list>

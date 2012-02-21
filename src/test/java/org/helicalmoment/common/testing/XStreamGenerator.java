@@ -1,4 +1,4 @@
-package org.helicalmoment.drools.testing;
+package org.helicalmoment.common.testing;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
