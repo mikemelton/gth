@@ -22,7 +22,7 @@ import org.helicalmoment.common.testing.TestCase;
 import org.junit.Test;
 
 @AllArgsConstructor
-public abstract class TestHarness {
+public abstract class AbstractTestHarness {
 	final private TestCase<?> testCase;
 	
 	@Test
