@@ -22,6 +22,7 @@ import java.util.List;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
@@ -33,8 +34,8 @@ import org.helicalmoment.common.testing.TestStep;
 
 @AllArgsConstructor @RequiredArgsConstructor @Slf4j @Getter @ToString
 public abstract class DefaultTestCase<T extends TestParameters> implements TestCase<T> {
-	private final String name;
-	private final String description;
+	@NonNull private final String name;
+	@NonNull private final String description;
 	private final boolean ignored;
 	@Setter(AccessLevel.PROTECTED) private List<TestStep<T>> steps;
 

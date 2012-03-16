@@ -127,6 +127,7 @@ public class NamedParameterized extends Suite {
 			if (a instanceof UseParametersStrategy) {
 				UseParametersStrategy ups = (UseParametersStrategy)a;
 				
+				// TODO: Use a factory instead of reflection
 				ParametersStrategy ps = constructor()
 					.withParameterTypes(String.class)
 					.in(ups.clazz())

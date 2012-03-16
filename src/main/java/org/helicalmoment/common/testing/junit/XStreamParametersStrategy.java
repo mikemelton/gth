@@ -28,7 +28,7 @@ import com.thoughtworks.xstream.XStream;
 
 @AllArgsConstructor
 public class XStreamParametersStrategy implements ParametersStrategy {
-	private @Setter String path;
+	@Setter private String path;
 
 	@SuppressWarnings("unchecked")
 	public List<? extends TestCase<?>> getTestCases() throws MalformedURLException {

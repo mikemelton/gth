@@ -1,6 +1,5 @@
 package org.helicalmoment.common.testing;
 
-import org.helicalmoment.common.testing.TestCase;
 import org.helicalmoment.common.testing.impl.AbstractTestHarness;
 import org.helicalmoment.common.testing.junit.GroovyParametersStrategy;
 import org.helicalmoment.common.testing.junit.NamedParameterized;

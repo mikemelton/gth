@@ -17,13 +17,14 @@
 package org.helicalmoment.common.testing.impl;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 import org.helicalmoment.common.testing.TestCase;
 import org.junit.Test;
 
 @AllArgsConstructor
 public abstract class AbstractTestHarness {
-	final private TestCase<?> testCase;
+	@NonNull final private TestCase<?> testCase;
 	
 	@Test
 	public void runTestCase() {		

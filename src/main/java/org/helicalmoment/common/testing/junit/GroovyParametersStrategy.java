@@ -25,13 +25,14 @@ import java.io.Reader;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 import org.helicalmoment.common.testing.TestCase;
 
 @AllArgsConstructor
 public class GroovyParametersStrategy implements ParametersStrategy {
-	@Setter private String path;
+	@Setter @NonNull private String path;
 
 	@SuppressWarnings("unchecked")
 	public List<? extends TestCase<?>> getTestCases() throws IOException {
