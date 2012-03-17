@@ -15,19 +15,11 @@
  */
 package org.helicalmoment.common.testing.impl;
 
-import lombok.AllArgsConstructor;
-import lombok.NonNull;
+import org.helicalmoment.common.testing.TestParameters;
 
-import org.helicalmoment.common.testing.TestCase;
-import org.junit.Test;
-
-// TODO: Do I need this?
-@AllArgsConstructor
-public abstract class AbstractTestHarness {
-	@NonNull final private TestCase<?> testCase;
-	
-	@Test
-	public void runTestCase() {		
-		testCase.executeTest();
-	}
+/**
+ * An empty implementation of {@link TestParameters}. Use this when your
+ * {@link TestStep} does not require any data from its {@link TestCase}.
+ */
+public class EmptyTestParameters implements TestParameters {
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Mike Melton
+ * Copyright 2012 Mike Melton
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
  */
 package org.helicalmoment.common.testing;
 
+// TODO: Do I need this?
 public interface TestHarness {
 	void runTestCase();
 }

@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.helicalmoment.common.testing.TestParameters;
 import org.helicalmoment.common.testing.TestStep;
-import org.helicalmoment.common.testing.impl.DefaultTestCase;
+import org.helicalmoment.common.testing.impl.AbstractTestCase;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -28,7 +28,7 @@ public class XStreamGenerator {
 		}
 	}
 	
-	static class TestTestCase extends DefaultTestCase<TestTestParameters> {
+	static class TestTestCase extends AbstractTestCase<TestTestParameters> {
 		@Getter @Setter private int id;
 		
 		public TestTestCase(String name, String description, boolean ignored) {
