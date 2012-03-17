@@ -4,9 +4,8 @@ import groovy.util.logging.Slf4j
 
 import org.helicalmoment.common.testing.TestParameters
 import org.helicalmoment.common.testing.TestStep
-import org.helicalmoment.common.testing.impl.DefaultTestCase
-
-class EmptyTestParameters implements TestParameters {}
+import org.helicalmoment.common.testing.impl.AbstractTestCase
+import org.helicalmoment.common.testing.impl.EmptyTestParameters
 
 @Slf4j
 @Canonical
@@ -35,7 +34,7 @@ class SquareTestStep implements TestStep<EmptyTestParameters> {
 }
 
 @Canonical
-class TestTestCase extends DefaultTestCase<EmptyTestParameters> {
+class TestTestCase extends AbstractTestCase<EmptyTestParameters> {
 	public TestTestCase(String name, String description, boolean ignored, List<TestStep<EmptyTestParameters>> steps) {
 		super(name, description, ignored, steps);
 	}
